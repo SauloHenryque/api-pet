@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "0f407763-0c20-4f24-a5b0-70e04eb21712",
+		"name": "Pets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autenticacao",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "administrador@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pets",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/autenticacao",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"autenticacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticacao - Detalhes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTgyOTEsImV4cCI6MTU1NDcyMTg5MSwibmJmIjoxNTU0NzE4MjkxLCJqdGkiOiJtNHFFSXJEZkY3NjdTNzJjIn0.wfARL6eBVHLm9yoJdCMwF6hhXVHzKMFTJiqaiC5VtmU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost/api-pet/public/api/autenticacao/detalhes",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"autenticacao",
+						"detalhes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Raça - Listagem",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1XHUwMGUxcmlvIEFkbWluaXN0cmFkb3IiLCJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvbG9zbW9zcXVldGVyb3MvZGVzYWZpby1wZXRzL3B1YmxpYy9hcGkvYXV0ZW50aWNhY2FvIiwiaWF0IjoxNTU0NzI4NTU4LCJleHAiOjE1NTQ3MzIxNTgsIm5iZiI6MTU1NDcyODU1OCwianRpIjoieUl3SnZ1MzdibTM4dTZJMyJ9.OEKxfEdIpC_jT0_ecRDh7RbZnd_6kX5TMC7DHgkMIjY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MjE0MDksImV4cCI6MTU1NDcyNTAwOSwibmJmIjoxNTU0NzIxNDA5LCJqdGkiOiJTRHI1VjZVeXppN0RXdlc5In0.M6rw6k7ibDtGwDj97FSEJTxJ6vyTu_-kkwsuRfw6IP8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/racas",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"racas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Raças - Novo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MjE0MDksImV4cCI6MTU1NDcyNTAwOSwibmJmIjoxNTU0NzIxNDA5LCJqdGkiOiJTRHI1VjZVeXppN0RXdlc5In0.M6rw6k7ibDtGwDj97FSEJTxJ6vyTu_-kkwsuRfw6IP8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Teste",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/racas/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"racas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Raças - Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTY5NzMsImV4cCI6MTU1NDcyMDU3MywibmJmIjoxNTU0NzE2OTczLCJqdGkiOiJMbVRWRmI0SmtWMHh1dUNiIn0.17QEzCUQ7L7OR40pqlDl0ZO_8HaG7f-svxxqJuhx8fA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Outro nome",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/racas/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"racas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Raças - Excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTY5NzMsImV4cCI6MTU1NDcyMDU3MywibmJmIjoxNTU0NzE2OTczLCJqdGkiOiJMbVRWRmI0SmtWMHh1dUNiIn0.17QEzCUQ7L7OR40pqlDl0ZO_8HaG7f-svxxqJuhx8fA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Outro nome",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/racas/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"racas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proprietario - Listagem",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTgyOTEsImV4cCI6MTU1NDcyMTg5MSwibmJmIjoxNTU0NzE4MjkxLCJqdGkiOiJtNHFFSXJEZkY3NjdTNzJjIn0.wfARL6eBVHLm9yoJdCMwF6hhXVHzKMFTJiqaiC5VtmU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/proprietarios",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"proprietarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proprietarios - Novo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTgyOTEsImV4cCI6MTU1NDcyMTg5MSwibmJmIjoxNTU0NzE4MjkxLCJqdGkiOiJtNHFFSXJEZkY3NjdTNzJjIn0.wfARL6eBVHLm9yoJdCMwF6hhXVHzKMFTJiqaiC5VtmU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Cliente 001",
+							"type": "text"
+						},
+						{
+							"key": "telefone",
+							"value": "9999-9999",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "cliente01@email.com",
+							"type": "text"
+						},
+						{
+							"key": "endereco",
+							"value": "nao informado",
+							"type": "text"
+						},
+						{
+							"key": "numero",
+							"value": "s/n",
+							"type": "text"
+						},
+						{
+							"key": "cidade",
+							"value": "João Pessoa",
+							"type": "text"
+						},
+						{
+							"key": "uf",
+							"value": "PB",
+							"type": "text"
+						},
+						{
+							"key": "pais",
+							"value": "BRASIL",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/proprietarios",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"proprietarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proprietario - Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTgyOTEsImV4cCI6MTU1NDcyMTg5MSwibmJmIjoxNTU0NzE4MjkxLCJqdGkiOiJtNHFFSXJEZkY3NjdTNzJjIn0.wfARL6eBVHLm9yoJdCMwF6hhXVHzKMFTJiqaiC5VtmU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Cliente 004",
+							"type": "text"
+						},
+						{
+							"key": "telefone",
+							"value": "8888-888",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "cliente01@email.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "endereco",
+							"value": "nao informado",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "numero",
+							"value": "s/n",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "cidade",
+							"value": "João Pessoa",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "uf",
+							"value": "PB",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "pais",
+							"value": "BRASIL",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/proprietarios/4",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"proprietarios",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proprietario - Excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTgyOTEsImV4cCI6MTU1NDcyMTg5MSwibmJmIjoxNTU0NzE4MjkxLCJqdGkiOiJtNHFFSXJEZkY3NjdTNzJjIn0.wfARL6eBVHLm9yoJdCMwF6hhXVHzKMFTJiqaiC5VtmU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Cliente 004",
+							"type": "text"
+						},
+						{
+							"key": "telefone",
+							"value": "8888-888",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "cliente01@email.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "endereco",
+							"value": "nao informado",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "numero",
+							"value": "s/n",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "cidade",
+							"value": "João Pessoa",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "uf",
+							"value": "PB",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "pais",
+							"value": "BRASIL",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/proprietarios/5",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"proprietarios",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pets - Listagem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTgyOTEsImV4cCI6MTU1NDcyMTg5MSwibmJmIjoxNTU0NzE4MjkxLCJqdGkiOiJtNHFFSXJEZkY3NjdTNzJjIn0.wfARL6eBVHLm9yoJdCMwF6hhXVHzKMFTJiqaiC5VtmU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost/api-pet/public/api/pets",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pets - Novo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTgyOTEsImV4cCI6MTU1NDcyMTg5MSwibmJmIjoxNTU0NzE4MjkxLCJqdGkiOiJtNHFFSXJEZkY3NjdTNzJjIn0.wfARL6eBVHLm9yoJdCMwF6hhXVHzKMFTJiqaiC5VtmU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Animal 001",
+							"type": "text"
+						},
+						{
+							"key": "porte",
+							"value": "pequeno",
+							"type": "text"
+						},
+						{
+							"key": "raca_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "proprietario_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/pets",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pets - Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTgyOTEsImV4cCI6MTU1NDcyMTg5MSwibmJmIjoxNTU0NzE4MjkxLCJqdGkiOiJtNHFFSXJEZkY3NjdTNzJjIn0.wfARL6eBVHLm9yoJdCMwF6hhXVHzKMFTJiqaiC5VtmU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Animal 001",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "porte",
+							"value": "medio",
+							"type": "text"
+						},
+						{
+							"key": "raca_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "proprietario_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/pets/2",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"pets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pets - Excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c2VyIjoxLCJuYW1lIjoiVXN1YXJpbyIsInN1YiI6MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9sb3Ntb3NxdWV0ZXJvcy9kZXNhZmlvLXBldHMvcHVibGljL2FwaS9hdXRlbnRpY2FjYW8iLCJpYXQiOjE1NTQ3MTgyOTEsImV4cCI6MTU1NDcyMTg5MSwibmJmIjoxNTU0NzE4MjkxLCJqdGkiOiJtNHFFSXJEZkY3NjdTNzJjIn0.wfARL6eBVHLm9yoJdCMwF6hhXVHzKMFTJiqaiC5VtmU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Animal 008",
+							"type": "text"
+						},
+						{
+							"key": "porte",
+							"value": "medio",
+							"type": "text"
+						},
+						{
+							"key": "raca_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "proprietario_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api-pet/public/api/pets/9",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-pet",
+						"public",
+						"api",
+						"pets",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
